@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Text;
-
+using System.Collections.Generic;
 namespace Library
 {
     public class AppointmentService
@@ -9,6 +9,8 @@ namespace Library
         {
             StringBuilder stringBuilder = new StringBuilder("Scheduling appointment...\n");
             Boolean isValid = true;
+            List<string> cita = new List<string>();
+            int contador=1;
 
             if (string.IsNullOrEmpty(name))
             {
@@ -44,8 +46,23 @@ namespace Library
             if (isValid)
             {
                 stringBuilder.Append("Appoinment scheduled");
+                cita.Add($"{contador}");
+                cita.Add(name);
+                cita.Add(id);
+                cita.Add(phoneNumber);
+                cita.Add($"{date}");
+                cita.Add(appoinmentPlace);
+                cita.Add(doctorName);
+                contador+=1;
             }
-
+            //El siguiente código es de prueba para comprobar que los valores fueron ingresados correctamente a la lista. 
+            //En todo caso sería una clase distinta para imprimir la información de la cita
+            /*
+            for (int i = 0; i < cita.Count; i++)
+            {
+                Console.WriteLine(cita[i]);
+                
+            }*/
             return stringBuilder.ToString();
         }
 

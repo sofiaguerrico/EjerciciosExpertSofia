@@ -16,9 +16,11 @@ Para el ejercicio se pide
 
 #### ✍ Parte 1
 **Criticar el código dado en base a patrónes y principios**
+El código se podía dividir en tres clases (o más en caso de querer agregar otras funcionalidades), ya que la información personal del paciente y doctor son independientes de la cita en sí. Dividiendolas en clases facilitaría el tomar a los pacientes y doctores como objetos y poder ingresarlos tantas veces sea necesario, en lugar de pasar por parametro toda la información, y en algunos casos tener que respetirla. 
 
 #### 🧐 Parte 2
 **Realizar las CRC correspondientes.**
+Se encuentra en la carpeta /ejercicio2/crc
 
 #### 👩‍💻 Parte 3
 **Aplique patrónes/principios según su crítica.**
